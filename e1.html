@@ -1,121 +1,109 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta lang="en">
+        <meta charset="UTF-8">
         <title>HTML Exercise</title>
+        <link rel="stylesheet" href="s1.css">
     </head>
     <body>
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">
-                        <header>
-                            <h1>Kripa S Rai</h1>
-                        </header>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="4" width="20%">
-                        <h2>Navigation:</h2>
-                        <nav>
-                            <h3><a href="#obj">Objectives</a></h3>
-                            <h3><a href="#edu">Education</a></h3>
-                            <h3><a href="#work">Work Experience</a></h3>
-                            <h3><a href="#proj">Projects</a></h3>
-                        </nav>
-                    </td>
-                    <td>
-                        <section id="obj">
-                            <h3>Objective:</h3><hr>
-                            <p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
-                        </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <section id="edu">
-                            <h3>Education:</h3><hr>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <h3>PES University, Bengaluru</h3>
-                                        <p>B.Tech in Computer Science and Engineering</p>
-                                    </td>
-                                    <td> 
-                                        <p>2022 - 2026</p>
-                                        <p>CGPA:9.02</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Pre-University</h3>
-                                        <p>Department of Pre-University Examination, Karnataka</p>
-                                    </td>
-                                    <td> 
-                                        <p>2020 - 2022</p>
-                                        <p>98.67%</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>SSLC</h3>
-                                        <p>Karnataka Secondary Education Examination Board</p>
-                                    </td>
-                                    <td> 
-                                        <p>2020</p>
-                                        <p>95.36%</p>
-                                    </td>
-                                </tr>
-                                
-                            </table>
-                        </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <section id="work">
-                            <h3>Work Experience:</h3><hr>
-                            <h4>UI Developer Intern</h4>
-                            <span>Jan 2026-Jun 2026</span>
-                            <p><i>Cimpress India Private Limited</i></p>
-                            <p>Developed frontend features and UI enhancements using React and Material UI</p>
-                            <p>Built reusable UI components and fixed UI-related issues.</p>
-                            <p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
-                        </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <section id="proj">
-                            <article>
-                            <h3>Projects:</h3><hr>
-                            <h4>Smart Waste Management System </h4>
-                            <i>Java,Spring Boot, MySQL</i>
-                            <p>REST API-based role management for waste pickup and live tracking via ThymeLeaf UI.</p>
-                            </article>
 
-                            <article>
-                            <h4>Personalized Medical Data Vault </h4>
-                            <i>Solidity,IPFS,MetaMask</i>
-                            <p>Secure blockchain vault for medical records with Ethereum based access control and IPFS Storage.</p>
-                            </article>
-                        </section>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2" align="center">
-                        <footer>
-                            <h3>Contact Me: </h3>
-                            <p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
-                            <p><a href="tel:+919353266721">Phone: +91 9353266721</a> </p>
-                        </footer>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
+        <div id="mypage-header">
+            <header>
+                <h1>Kripa S Rai</h1>
+            </header>
+        </div>
+        <div id="mypage-body">
+
+                <div id="mypage-leftnav">
+                    <h2>Navigation:</h2>
+                    <nav>
+                        <h3><a href="#obj">Objectives</a></h3>
+                        <h3><a href="#edu">Education</a></h3>
+                        <h3><a href="#work">Work Experience</a></h3>
+                        <h3><a href="#proj">Projects</a></h3>
+                    </nav>
+                </div>
+
+
+                <div id="mypage-centercontent">
+
+                    <section id="obj">
+                        <h3>Objective:</h3><hr>
+                        <p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
+                    </section>
+
+                    <section id="edu">
+                        <h3>Education:</h3><hr>
+                        <div class="edu-item">
+                            <div class="edu-details">
+                                <h3>PES University, Bengaluru</h3>
+                                <p>B.Tech in Computer Science and Engineering</p>
+                            </div>
+                            <div class="edu-year">
+                                <p>2022 - 2026</p>
+                                <p>CGPA:9.02</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-details">
+                                <h3>Pre-University</h3>
+                                <p>Department of Pre-University Examination, Karnataka</p>
+                            </div>
+                            <div class="edu-year">
+                                <p>2020 - 2022</p>
+                                <p>98.67%</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-details">
+                                <h3>SSLC</h3>
+                                <p>Karnataka Secondary Education Examination Board</p>
+                            </div>
+                            <div class="edu-year">
+                                <p>2020</p>
+                                <p>95.36%</p>
+                            </div>
+                        </div>
+                            
+                    </section>
+
+                    <section id="work">
+                        <h3>Work Experience:</h3><hr>
+                        <div id="work-header">
+                            <h4>UI Developer Intern</h4>
+                            <span class="time">Jan 2026-Jun 2026</span>
+                        </div>
+                        <p class="company">Cimpress India Private Limited</p>
+                        <p>Developed frontend features and UI enhancements using React and Material UI</p>
+                        <p>Built reusable UI components and fixed UI-related issues.</p>
+                        <p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
+                    </section>
+
+
+                    <section id="proj">
+                        <article>
+                        <h3>Projects:</h3><hr>
+                        <h4>Smart Waste Management System </h4>
+                        <p class="tech">Java,Spring Boot, MySQL</p>
+                        <p>REST API-based role management for waste pickup and live tracking via ThymeLeaf UI.</p>
+                        </article>
+
+                        <article>
+                        <h4>Personalized Medical Data Vault </h4>
+                        <p class="tech">Solidity,IPFS,MetaMask</p>
+                        <p>Secure blockchain vault for medical records with Ethereum based access control and IPFS Storage.</p>
+                        </article>
+                    </section>
+                </div>
+        </div>
+        <div id="mypage-footer">
+            <footer>
+                <h3>Contact Me: </h3>
+                <p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
+                <p><a href="tel:+919353266721">Phone: +91 9353266721</a> </p>
+            </footer>
+        </div>
+
+
     </body>
 </html>

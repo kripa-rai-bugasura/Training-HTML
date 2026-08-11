@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #F9F7ED;
+  color: #36393D;
+}
+
+#mypage-header {
+  background-color: #D15600;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px #6BBA70;
+}
+
+#mypage-header h1 {
+  margin: 0;
+  font-size: 2.75em;
+  letter-spacing: 2px;
+}
+
+#mypage-body {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px auto;
+  margin-top: 90px; 
+  width: 98%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #FF7400;
+}
+
+#mypage-leftnav {
+  width: 20%;
+  padding: 20px;
+  background-color: #F9F7ED;
+}
+
+#mypage-leftnav h2 {
+  font-size: 1.75em;
+  color: #B02B2C;
+}
+
+#mypage-leftnav a {
+    display: block;
+    text-decoration: none;
+    color: #B02B2C;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#mypage-leftnav a:hover {
+    color: #D15600;
+    text-decoration: underline;
+}
+
+
+#mypage-centercontent {
+  width: 80%;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+#mypage-centercontent h2 {
+  font-size: 1.75em;
+  color: #B02B2C;
+}
+
+#mypage-centercontent h3 {
+  font-size: 1.5em;
+  color: #D15600;
+}
+
+#mypage-centercontent h4 {
+  font-size: 1.25em;
+  color: #B02B2C;
+}
+
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.edu-details {
+  width: 70%;
+}
+
+.edu-year {
+  width: 30%;
+  text-align: right;
+}
+
+#work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.time {
+    color: #B02B2C;
+    font-size: 1.1em;
+}
+
+.company {
+    color: #B02B2C;
+    font-size: 1.2em;
+}
+
+.tech {
+    font-style: italic;
+    color: #B02B2C;
+}
+
+#mypage-footer {
+  background-color: #B02B2C;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+#mypage-footer h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+#mypage-footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#mypage-footer a:hover {
+  text-decoration: underline;
+}
