@@ -9,7 +9,7 @@
 
         <div id="mypage-header">
             <header>
-                <h1>Kripa S Rai</h1>
+                <h1 id="name">Kripa S Rai</h1>
             </header>
         </div>
         <div id="mypage-body">
@@ -100,10 +100,46 @@
             <footer>
                 <h3>Contact Me: </h3>
                 <p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
-                <p><a href="tel:+919353266721">Phone: +91 9353266721</a> </p>
+                <p><a id="mypage-phone" href="tel:+919353266721">Phone: +91 9353266721</a> </p>
             </footer>
         </div>
 
+        <section id="user-interaction">
+            <h2>User Interaction:</h2><hr>
+
+            <form class="interaction">
+                <h3>Find Maximum</h3>
+                <input type="number" id="num1" placeholder="Enter first number">
+                <input type="number" id="num2" placeholder="Enter second number">
+                <input type="button" value="Find Maximum" onclick="displayMax()">
+                <div id="max"></div>
+            </form>
+
+            <form class="interaction">
+                <h3>Reverse String</h3>
+                <input type="text" id="reverse" placeholder="Enter a string">
+                <input type="button" value="Reverse" onclick="displayReverse()">
+                <div id="rev"></div>
+            </form>
+
+            <form class="interaction">
+                <h3>Find Largest Word</h3>
+                <input type="text" id="words" placeholder="Enter a list of comma-separated words">
+                <input type="button" value="Find Largest Word" onclick="displayLongestWord()">
+                <div id="largest"></div>
+            </form>
+
+            <form class="interaction">
+                <h3>Save Details</h3>
+                <input type="text" id="username" placeholder="Enter your name">
+                <input type="tel" id="user-phone" placeholder="Enter your phone number">
+                <input type="button" value="Save" onclick="saveDetails()">
+                <div id="saved"></div>
+            </form>
+
+        </section>
+
+        <script src="script.js"></script>
 
     </body>
 </html>

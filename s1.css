@@ -138,3 +138,48 @@ body {
 #mypage-footer a:hover {
   text-decoration: underline;
 }
+
+.user-interaction {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 1px solid #EEEEEE;
+  width: 30px auto;
+}
+
+.user-interaction h2 {
+  font-size: 1.5em;
+  color: #36393D;
+  margin-bottom: 10px;
+}
+
+.interaction {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+}
+
+.interaction input {
+  padding: 8px;
+  margin: 5px;
+}
+
+.interaction input[type="button"] {
+  padding: 8px 12px;
+  background-color: #3F4C6B;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.interaction button:hover {
+  background-color: #36393D;
+}
+
+.interaction div {
+  margin: 5px 0;
+  padding: 6px;
+}
+
+.interaction div span {
+  font-weight: bold;
+  color: #3F4C6B;
+}
