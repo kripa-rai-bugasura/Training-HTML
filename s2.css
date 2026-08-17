@@ -1,56 +1,61 @@
+/* box sizing to border-box for all elements, to make it easier to calculate box width and height */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
+/* basic styling for the page */
 body {
-  margin: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #F9F7ED;
-  color: #36393D;
+	margin: 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: #F9F7ED;
+  	color: #36393D;
 }
 
-#mypage-header {
-  background-color: #D15600;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 25px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 6px #6BBA70;
+/* header styles */
+#mypage_header {
+	background-color: #D15600;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 25px;
+	position: fixed; /* header fixed at the top of the page */
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 2px 6px #6BBA70;
 }
 
-#mypage-header h1 {
-  margin: 0;
-  font-size: 2.75em;
-  letter-spacing: 2px;
+#mypage_header h1 {
+	margin: 0;
+	font-size: 2.75em;
+	letter-spacing: 2px;
 }
 
-#mypage-body {
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 20px auto;
-  margin-top: 90px; 
-  width: 98%;
-  padding: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #FF7400;
+/* page body styles */
+#mypage_body {
+	display: flex;
+	flex-direction: row-reverse; /* to place the navigation bar on the right side of the page */
+	margin: 20px auto;
+	margin-top: 90px; 
+	width: 98%;
+	padding: 20px;
+	background-color: #FFFFFF;
+	border: 1px solid #FF7400;
 }
 
-#mypage-leftnav {
-  width: 20%;
-  padding: 20px;
-  background-color: #F9F7ED;
+/* navigation bar at the right side of the page */
+#mypage_leftnav {
+	width: 20%;
+	padding: 20px;
+	background-color: #F9F7ED;
 }
 
-#mypage-leftnav h2 {
-  font-size: 1.75em;
-  color: #B02B2C;
+#mypage_leftnav h2 {
+	font-size: 1.75em;
+	color: #B02B2C;
 }
 
-#mypage-leftnav a {
+#mypage_leftnav a {
     display: block;
     text-decoration: none;
     color: #B02B2C;
@@ -58,52 +63,54 @@ body {
     margin-bottom: 20px;
 }
 
-#mypage-leftnav a:hover {
+#mypage_leftnav a:hover {
     color: #D15600;
     text-decoration: underline;
 }
 
-
-#mypage-centercontent {
-  width: 80%;
-  padding: 20px;
-  line-height: 1.6;
+/* center content styles */
+#mypage_centercontent {
+	width: 80%;
+	padding: 20px;
+	line-height: 1.6;
 }
 
-#mypage-centercontent h2 {
-  font-size: 1.75em;
-  color: #B02B2C;
+#mypage_centercontent h2 {
+	font-size: 1.75em;
+	color: #B02B2C;
 }
 
-#mypage-centercontent h3 {
-  font-size: 1.5em;
-  color: #D15600;
+#mypage_centercontent h3 {
+	font-size: 1.5em;
+	color: #D15600;
 }
 
-#mypage-centercontent h4 {
-  font-size: 1.25em;
-  color: #B02B2C;
+#mypage_centercontent h4 {
+	font-size: 1.25em;
+	color: #B02B2C;
 }
 
-.edu-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding: 10px;
+/*education section styles */
+.edu_item {
+	display: flex;
+	justify-content: space-between; /* placing education details and year and gpa info side by side using flexbox */
+	margin-bottom: 20px;
+	padding: 10px;
 }
 
-.edu-details {
-  width: 70%;
+.edu_details {
+	width: 70%;
 }
 
-.edu-year {
-  width: 30%;
-  text-align: right;
+.edu_year {
+	width: 30%;
+	text-align: right;
 }
 
-#work-header {
+/* work experience section styles */
+#work_header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* placing header and year info side by side using flexbox */
     align-items: center;
     height: 40px;
 }
@@ -114,32 +121,33 @@ body {
 }
 
 .company {
-    color: #B02B2C;
+	color: #B02B2C;
     font-size: 1.2em;
 }
 
 .tech {
-    font-style: italic;
+    font-style: italic; /* technologies written in italics to differentiate from other text */
     color: #B02B2C;
 }
 
-#mypage-footer {
-  background-color: #B02B2C;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 20px;
+/* page footer styles */
+#mypage_footer {
+	background-color: #B02B2C;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 20px;
 }
 
-#mypage-footer h3 {
-  margin: 0;
-  font-size: 1.5em;
+#mypage_footer h3 {
+	margin: 0;
+	font-size: 1.5em;
 }
 
-#mypage-footer a {
-  color: #FFFFFF;
-  text-decoration: none;
+#mypage_footer a {
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
-#mypage-footer a:hover {
-  text-decoration: underline;
+#mypage_footer a:hover {
+	text-decoration: underline;
 }

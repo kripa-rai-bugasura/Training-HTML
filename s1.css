@@ -1,140 +1,148 @@
+/* box sizing to border-box for all elements, to make it easier to calculate box width and height */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
+/* basic styling for the page */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #FFFFFF;
-  color: #36393D;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #FFFFFF;
+	color: #36393D;
 }
 
-#mypage-header {
-  background-color: #3F4C6B;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 25px;
+/* header styles */
+#mypage_header {
+	background-color: #3F4C6B;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 25px;
 }
 
-#mypage-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+#mypage_header h1 {
+	margin: 0;
+	font-size: 2.5em;
 }
 
-#mypage-body {
-  display: flex;
-  margin: 20px auto;
-  width: 98%;
-  padding: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #EEEEEE;
+/* page body styles */
+#mypage_body {
+	display: flex;
+	margin: 20px auto;
+	width: 98%;
+	padding: 20px;
+	background-color: #FFFFFF;
+	border: 1px solid #EEEEEE;
 }
 
-#mypage-leftnav {
-  width: 20%;
-  padding: 20px;
-  background-color: #EEEEEE;
+/* left navigation bar styles */
+#mypage_leftnav {
+	width: 20%;
+	padding: 20px;
+	background-color: #EEEEEE;
 }
 
-#mypage-leftnav h2 {
-  font-size: 1.5em;
-  color: #36393D;
+#mypage_leftnav h2 {
+	font-size: 1.5em;
+	color: #36393D;
 }
 
-#mypage-leftnav a {
-    display: block;
-    text-decoration: none;
-    color: #356AA0;
-    font-size: 1.1em;
-    margin-bottom: 20px;
+#mypage_leftnav a {
+	display: block;
+	text-decoration: none;
+	color: #356AA0;
+	font-size: 1.1em;
+	margin-bottom: 20px;
 }
 
-#mypage-leftnav a:hover {
-    color: #3F4C6B;
-    text-decoration: underline;
+#mypage_leftnav a:hover {
+	color: #3F4C6B;
+	text-decoration: underline;
 }
 
-
-#mypage-centercontent {
-  width: 80%;
-  padding: 20px;
-  line-height: 1.6;
+/* center content styles */
+#mypage_centercontent {
+	width: 80%;
+	padding: 20px;
+	line-height: 1.6;
 }
 
-#mypage-centercontent h2 {
-  font-size: 1.5em;
-  color: #36393D;
+#mypage_centercontent h2 {
+	font-size: 1.5em;
+	color: #36393D;
 }
 
-#mypage-centercontent h3 {
-  font-size: 1.2em;
-  color: #3F4C6B;
+#mypage_centercontent h3 {
+	font-size: 1.2em;
+	color: #3F4C6B;
 }
 
-#mypage-centercontent h4 {
-  font-size: 1.1em;
-  color: #3F4C6B;
+#mypage_centercontent h4 {
+	font-size: 1.1em;
+	color: #3F4C6B;
 }
 
 /* #mypage-centercontent hr {
-  border: 0;
-  border-top: 1px solid #EEEEEE;
+border: 0;
+border-top: 1px solid #EEEEEE;
 } */
 
-.edu-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding: 10px;
+/*education section styles */
+.edu_item {
+	display: flex;
+	justify-content: space-between; /* placing education details and year and gpa info side by side using flexbox */
+	margin-bottom: 20px;
+	padding: 10px;
 }
 
-.edu-details {
-  width: 70%;
+.edu_details {
+	width: 70%;
 }
 
-.edu-year {
-  width: 30%;
-  text-align: right;
+.edu_year {
+	width: 30%;
+	text-align: right;
 }
 
-#work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* work experience section styles */
+#work_header {
+	display: flex;
+	justify-content: space-between; /* placing header and year info side by side using flexbox */
+	align-items: center;
 }
 
 .time {
-    color: #36393D;
-    font-size: 1em;
+	color: #36393D;
+	font-size: 1em;
 }
 
 .company {
-    color: #3F4C6B;
-    font-size: 1.1em;
+	color: #3F4C6B;
+	font-size: 1.1em;
 }
 
 .tech {
-    font-style: italic;
-    color: #3F4C6B;
+	font-style: italic; /* technologies written in italics to differentiate from other text */
+	color: #3F4C6B;
 }
 
-#mypage-footer {
-  background-color: #2c3e50;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 20px;
+/* page footer styles */
+#mypage_footer {
+	background-color: #2c3e50;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 20px;
 }
 
-#mypage-footer h3 {
-  margin: 0;
-  font-size: 1.5em;
+#mypage_footer h3 {
+	margin: 0;
+	font-size: 1.5em;
 }
 
-#mypage-footer a {
-  color: #FFFFFF;
-  text-decoration: none;
+#mypage_footer a {
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
-#mypage-footer a:hover {
-  text-decoration: underline;
+#mypage_footer a:hover {
+	text-decoration: underline;
 }
