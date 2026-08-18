@@ -197,3 +197,76 @@ function loadDetails() {
 
 // Load saved cookie details when the page opens
 window.onload = loadDetails;
+
+
+
+// JQUERY EXERCISE
+$(document).ready(function(){
+
+	// PART 1
+	// a. Change the background color to #FFFF88 
+	$(this).css("background-color","#FFFF88");
+
+
+	// a. remove the border for all input elements in the page
+	$("input").css("border","none");
+
+
+	// a. Change table border color and text color
+	$("table").css({"border":"#FF1A00", "color":"#CC0000"});
+
+
+	// b. Hide the element with ID mypage-footer
+	$("#mypage_footer").hide();
+
+
+
+	// c. Create a new div
+	const ref_div = $("<div></div>").attr("id","references").css({"width": "98%", "padding":"20px","border": "1px solid #EEEEEE", "margin" : "20px auto"});
+	// array of references
+	const references =[{ id : "html", name : "HTML Tutorials", url : "http://w3schools.com/html/default.asp"}, 
+		{ id : "css", name : "CSS Tutorials", url: "https://www.w3schools.com/css/default.asp"},
+		{ id : "js", name : "JavaScript Tutorials", url: "http://w3schools.com/js/default.asp" },
+		{ id: "jq", name : "JQUERY Tutorials", url: "http://www.w3schools.com/jquery/default.asp"}
+	];
+
+	// create a header for the references div
+	const ref_header = $("<h2></h2>").text("References: ");
+	ref_div.append(ref_header); // add the header to the div
+
+	const list = $("<ul></ul>").css("list-style", "none"); // create a list element to add the references
+	// traverse through the array, create list items and append it to the list
+	for(const ref of references){
+        const li = $("<li></li>");
+		const anchor = $("<a></a>").attr("id",ref.id).attr("href",ref.url).attr("target","_blank").text(ref.name).css("text-decoration","none");
+		li.append(anchor);
+		list.append(li);
+	}
+	ref_div.append(list); // append the list to the div
+
+	$("#mypage_footer").before(ref_div); // add the div before footer
+
+
+
+	//PART 2
+	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
+    $("#mypage_header").height(10).css("overflow","hidden")
+		.hover(
+			function(){
+				$(this).height("");
+			},
+			function(){
+				$(this).height(10);
+			}
+		);
+
+
+	// b. slideDown footer with speed of 10s and pop up an alert message once it is complete
+	$("#mypage_footer").slideDown(10000, function(){
+		alert("Animation complete.");
+	});
+    
+});
+
+
+// 1. 
