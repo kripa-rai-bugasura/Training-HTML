@@ -46,16 +46,24 @@ body {
 /* navigation bar at the right side of the page */
 #mypage_leftnav {
 	width: 20%;
-	padding: 20px;
 	background-color: #F9F7ED;
 }
 
-#mypage_leftnav h2 {
+#sticky_content {
+	width:100%;
+	top: 100px;
+	padding: 10px 20px 20px;
+	align-self: start;
+	position: sticky;
+}
+
+#sticky_content h2 {
 	font-size: 1.75em;
 	color: #B02B2C;
 }
 
-#mypage_leftnav a {
+/* style navigation links */
+#sticky_content a {
     display: block;
     text-decoration: none;
     color: #B02B2C;
@@ -63,7 +71,8 @@ body {
     margin-bottom: 20px;
 }
 
-#mypage_leftnav a:hover {
+/* change link appearance when mouse is over it */
+#sticky_content a:hover {
     color: #D15600;
     text-decoration: underline;
 }
@@ -88,6 +97,10 @@ body {
 #mypage_centercontent h4 {
 	font-size: 1.25em;
 	color: #B02B2C;
+}
+
+#mypage_centercontent section {
+	scroll-margin-top: 130px; /*to prevent content hiding behind the header*/
 }
 
 /*education section styles */

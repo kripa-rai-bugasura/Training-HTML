@@ -37,16 +37,22 @@ body {
 /* left navigation bar styles */
 #mypage_leftnav {
 	width: 20%;
-	padding: 20px;
 	background-color: #EEEEEE;
 }
+#sticky_content {
+	width:100%;
+	top: 0px;
+	padding: 20px;
+	align-self: start;
+	position: sticky;
 
-#mypage_leftnav h2 {
+}
+#sticky_content h2 {
 	font-size: 1.5em;
 	color: #36393D;
 }
-
-#mypage_leftnav a {
+/* style navigation links */
+#sticky_content a {
 	display: block;
 	text-decoration: none;
 	color: #356AA0;
@@ -54,7 +60,8 @@ body {
 	margin-bottom: 20px;
 }
 
-#mypage_leftnav a:hover {
+/* change link appearance when mouse is over it */
+#sticky_content a:hover {
 	color: #3F4C6B;
 	text-decoration: underline;
 }
