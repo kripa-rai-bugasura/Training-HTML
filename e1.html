@@ -1,145 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML Exercise</title>
-        <link rel="stylesheet" href="s1.css">
-    </head>
-    <body>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML Exercise</title>
+		<link rel="stylesheet" href="s1.css">
+	</head>
 
-        <div id="mypage-header">
-            <header>
-                <h1 id="name">Kripa S Rai</h1>
-            </header>
-        </div>
-        <div id="mypage-body">
+	<body>
 
-                <div id="mypage-leftnav">
-                    <h2>Navigation:</h2>
-                    <nav>
-                        <h3><a href="#obj">Objectives</a></h3>
-                        <h3><a href="#edu">Education</a></h3>
-                        <h3><a href="#work">Work Experience</a></h3>
-                        <h3><a href="#proj">Projects</a></h3>
-                    </nav>
-                </div>
+		<!-- PAGE HEADER  -->
+		<div id="mypage_header">
+			<header>
+				<h1 id="name">Kripa S Rai</h1>
+			</header>
+		</div>
+
+		<!-- PAGE BODY -->
+		<!-- Contains navigation and main resume content -->
+		<div id="mypage_body">
+
+			<!-- NAVIGATION BAR -->
+			<div id="mypage_leftnav">
+				<div id="sticky_content">
+					<h2>Navigation:</h2>
+					<nav>
+						<h3><a href="#obj">Objectives</a></h3>
+						<h3><a href="#edu">Education</a></h3>
+						<h3><a href="#work">Work Experience</a></h3>
+						<h3><a href="#proj">Projects</a></h3>
+					</nav>
+				</div>
+			</div>
+
+			<!-- CENTER CONTENT -->
+			<div id="mypage_centercontent">
+
+				<!-- OBJECTIVE SECTION -->
+				<section id="obj">
+					<h3>Objective:</h3><hr>
+					<p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
+				</section>
+
+				<!-- EDUCATION SECTION -->
+				<section id="edu">
+					<h3>Education:</h3><hr>
+
+					<!-- University -->
+					<div class="edu_item">
+						<div class="edu_details">
+							<h3>PES University, Bengaluru</h3>
+							<p>B.Tech in Computer Science and Engineering</p>
+						</div>
+						<div class="edu_year">
+							<p>2022 - 2026</p>
+							<p>CGPA:9.02</p>
+						</div>
+					</div>
+
+					<!-- Pre-University -->
+					<div class="edu_item">
+						<div class="edu_details">
+							<h3>Pre-University</h3>
+							<p>Department of Pre-University Examination, Karnataka</p>
+						</div>
+						<div class="edu_year">
+							<p>2020 - 2022</p>
+							<p>98.67%</p>
+						</div>
+					</div>
+
+					<!-- SSLC -->
+					<div class="edu_item">
+						<div class="edu_details">
+							<h3>SSLC</h3>
+							<p>Karnataka Secondary Education Examination Board</p>
+						</div>
+						<div class="edu_year">
+							<p>2020</p>
+							<p>95.36%</p>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- WORK EXPERIENCE SECTION -->
+				<section id="work">
+					<h3>Work Experience:</h3><hr>
+					<div id="work_header">
+						<h4>UI Developer Intern</h4>
+						<span class="time">Jan 2026-Jun 2026</span>
+					</div>
+					<p class="company">Cimpress India Private Limited</p>
+					<p>Developed frontend features and UI enhancements using React and Material UI</p>
+					<p>Built reusable UI components and fixed UI-related issues.</p>
+					<p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
+				</section>
+
+				<!-- PROJECT DETAILS -->
+				<section id="proj">
+
+					<!-- Project 1 -->
+					<article>
+						<h3>Projects:</h3><hr>
+						<h4>Smart Waste Management System </h4>
+						<p class="tech">Java,Spring Boot, MySQL</p>
+						<p>REST API-based role management for waste pickup and live tracking via ThymeLeaf UI.</p>
+					</article>
+
+					<!-- Project 2 -->
+					<article>
+						<h4>Personalized Medical Data Vault </h4>
+						<p class="tech">Solidity,IPFS,MetaMask</p>
+						<p>Secure blockchain vault for medical records with Ethereum based access control and IPFS Storage.</p>
+					</article>
+				</section>
+			</div>
+		</div>
 
 
-                <div id="mypage-centercontent">
+		<!-- USER INTERACTION SECTION -->
+		<section id="user_interaction">
+			<h2>User Interaction:</h2><hr>
 
-                    <section id="obj">
-                        <h3>Objective:</h3><hr>
-                        <p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
-                    </section>
+				<!-- Find maximum of two numbers-->
+				<form class="interaction">
+					<h3>Find Maximum</h3>
+					<input type="number" id="num1" placeholder="Enter first number">
+					<input type="number" id="num2" placeholder="Enter second number">
+					<input type="button" value="Find Maximum" onclick="displayMax()">
+					<div id="max"></div>  <!-- Result or validation message -->
+				</form>
 
-                    <section id="edu">
-                        <h3>Education:</h3><hr>
-                        <div class="edu-item">
-                            <div class="edu-details">
-                                <h3>PES University, Bengaluru</h3>
-                                <p>B.Tech in Computer Science and Engineering</p>
-                            </div>
-                            <div class="edu-year">
-                                <p>2022 - 2026</p>
-                                <p>CGPA:9.02</p>
-                            </div>
-                        </div>
-                        <div class="edu-item">
-                            <div class="edu-details">
-                                <h3>Pre-University</h3>
-                                <p>Department of Pre-University Examination, Karnataka</p>
-                            </div>
-                            <div class="edu-year">
-                                <p>2020 - 2022</p>
-                                <p>98.67%</p>
-                            </div>
-                        </div>
-                        <div class="edu-item">
-                            <div class="edu-details">
-                                <h3>SSLC</h3>
-                                <p>Karnataka Secondary Education Examination Board</p>
-                            </div>
-                            <div class="edu-year">
-                                <p>2020</p>
-                                <p>95.36%</p>
-                            </div>
-                        </div>
-                            
-                    </section>
+				<!-- Reverse the input string -->
+				<form class="interaction">
+					<h3>Reverse String</h3>
+					<input type="text" id="reverse" placeholder="Enter a string">
+					<input type="button" value="Reverse" onclick="displayReverse()">
+					<div id="rev"></div>  <!-- Result or validation message -->
+				</form>
 
-                    <section id="work">
-                        <h3>Work Experience:</h3><hr>
-                        <div id="work-header">
-                            <h4>UI Developer Intern</h4>
-                            <span class="time">Jan 2026-Jun 2026</span>
-                        </div>
-                        <p class="company">Cimpress India Private Limited</p>
-                        <p>Developed frontend features and UI enhancements using React and Material UI</p>
-                        <p>Built reusable UI components and fixed UI-related issues.</p>
-                        <p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
-                    </section>
+				<!-- Find the longest word -->
+				<form class="interaction">
+					<h3>Find Largest Word</h3>
+					<input type="text" id="words" placeholder="Enter a list of comma-separated words">
+					<input type="button" value="Find Largest Word" onclick="displayLongestWord()">
+					<div id="largest"></div>  <!-- Result or validation message -->
+				</form>
+
+				<!-- Save Details into  Cookie -->
+				<form class="interaction">
+					<h3>Save Details</h3>
+					<input type="text" id="username" placeholder="Enter your name">
+					<input type="tel" id="user_phone" placeholder="Enter your phone number">
+					<input type="button" value="Save" onclick="saveDetails()">
+					<div id="saved"></div>  <!-- Result or validation message -->
+				</form>
+
+		</section>
+
+		<!-- PAGE FOOTER WITH CONTACT DETAILS -->
+		<div id="mypage_footer">
+			<footer>
+				<h3>Contact Me: </h3>
+				<p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
+				<p><a id="mypage_phone" href="tel:+919353266721">Phone: +91 9353266721</a> </p>
+			</footer>
+		</div>
 
 
-                    <section id="proj">
-                        <article>
-                        <h3>Projects:</h3><hr>
-                        <h4>Smart Waste Management System </h4>
-                        <p class="tech">Java,Spring Boot, MySQL</p>
-                        <p>REST API-based role management for waste pickup and live tracking via ThymeLeaf UI.</p>
-                        </article>
+		<!-- Link script to the JavaScript file -->
+		<script src="script.js"></script>
 
-                        <article>
-                        <h4>Personalized Medical Data Vault </h4>
-                        <p class="tech">Solidity,IPFS,MetaMask</p>
-                        <p>Secure blockchain vault for medical records with Ethereum based access control and IPFS Storage.</p>
-                        </article>
-                    </section>
-                </div>
-        </div>
-        <div id="mypage-footer">
-            <footer>
-                <h3>Contact Me: </h3>
-                <p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
-                <p><a id="mypage-phone" href="tel:+919353266721">Phone: +91 9353266721</a> </p>
-            </footer>
-        </div>
-
-        <section id="user-interaction">
-            <h2>User Interaction:</h2><hr>
-
-            <form class="interaction">
-                <h3>Find Maximum</h3>
-                <input type="number" id="num1" placeholder="Enter first number">
-                <input type="number" id="num2" placeholder="Enter second number">
-                <input type="button" value="Find Maximum" onclick="displayMax()">
-                <div id="max"></div>
-            </form>
-
-            <form class="interaction">
-                <h3>Reverse String</h3>
-                <input type="text" id="reverse" placeholder="Enter a string">
-                <input type="button" value="Reverse" onclick="displayReverse()">
-                <div id="rev"></div>
-            </form>
-
-            <form class="interaction">
-                <h3>Find Largest Word</h3>
-                <input type="text" id="words" placeholder="Enter a list of comma-separated words">
-                <input type="button" value="Find Largest Word" onclick="displayLongestWord()">
-                <div id="largest"></div>
-            </form>
-
-            <form class="interaction">
-                <h3>Save Details</h3>
-                <input type="text" id="username" placeholder="Enter your name">
-                <input type="tel" id="user-phone" placeholder="Enter your phone number">
-                <input type="button" value="Save" onclick="saveDetails()">
-                <div id="saved"></div>
-            </form>
-
-        </section>
-
-        <script src="script.js"></script>
-
-    </body>
+	</body>
 </html>
