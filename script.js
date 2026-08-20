@@ -41,6 +41,7 @@ function displayMax() {
     let result = max(num1, num2);
     res.innerHTML = "The maximum number is: <span class='res'>" + result + "</span>";
 }
+document.getElementById("max_btn").addEventListener('click',displayMax);
 
 
 // REVERSE A STRING
@@ -73,6 +74,7 @@ function displayReverse() {
     const reversed = reverse(inp);
     rev.innerHTML = "Reversed string is: <span class='res'>" + reversed + "</span>";
 }
+document.getElementById("rev_btn").addEventListener('click',displayReverse);
 
 
 // FIND LONGEST WORD
@@ -120,9 +122,9 @@ function displayLongestWord() {
     const largest = document.getElementById("largest");
 	// Remove previously added error styling
 	largest.classList.remove("error");
-	largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
+	if(FindLongestWord(inp))largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
 }
-
+document.getElementById("lng_btn").addEventListener('click',displayLongestWord);
 
 // SAVE DETAILS USING COOKIES
 
@@ -168,6 +170,7 @@ function saveDetails() {
 	saved.classList.add("success");
     saved.innerText = "Details saved successfully!";
 }
+document.getElementById("save_btn").addEventListener('click',saveDetails);
 
 // LOAD DETAILS FROM THE COOKIES
 function loadDetails() {
