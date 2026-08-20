@@ -205,7 +205,7 @@ $(document).ready(function(){
 
 	// PART 1
 	// a. Change the background color to #FFFF88 
-	$(this).css("background-color","#FFFF88");
+	$("body").css("background-color","#FFFF88");
 
 
 	// a. remove the border for all input elements in the page
@@ -250,13 +250,13 @@ $(document).ready(function(){
 
 	//PART 2
 	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
-    $("#mypage_header").height(10).css("overflow","hidden")
+    $("#mypage_header").css({"height": "10px ", "overflow":"hidden"})
 		.hover(
 			function(){
 				$(this).height("");
 			},
 			function(){
-				$(this).height(10);
+				$(this).css({"height": "10px", "overflow":"hidden"});
 			}
 		);
 
