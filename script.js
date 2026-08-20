@@ -120,7 +120,7 @@ function displayLongestWord() {
     const largest = document.getElementById("largest");
 	// Remove previously added error styling
 	largest.classList.remove("error");
-	largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
+	if(FindLongestWord(inp)) largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
 }
 
 
