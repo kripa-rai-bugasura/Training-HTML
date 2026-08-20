@@ -4,8 +4,11 @@
         <meta lang="en">
         <title>HTML Exercise</title>
     </head>
+
     <body>
-        <table>
+		<!-- Main page table -->
+        <table width="100%" border="1" cellpadding="12">
+			<!-- Header -->
             <thead>
                 <tr>
                     <th colspan="2">
@@ -15,37 +18,40 @@
                     </th>
                 </tr>
             </thead>
+
+			<!-- Navigation and center content area -->
             <tbody>
-                <tr>
-                    <td rowspan="4" width="20%">
+                <tr valign="top">
+					<!-- Left navigation -->
+                    <td width="20%" valign="top">
                         <h2>Navigation:</h2>
                         <nav>
-                            <h3><a href="#obj">Objectives</a></h3>
+                            <h3><a href="#obj">Objective</a></h3>
                             <h3><a href="#edu">Education</a></h3>
                             <h3><a href="#work">Work Experience</a></h3>
                             <h3><a href="#proj">Projects</a></h3>
                         </nav>
                     </td>
-                    <td>
+					<!-- Main content column -->
+                    <td width="80%" valign="top">
+						<!-- Objective section -->
                         <section id="obj">
                             <h3>Objective:</h3><hr>
                             <p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
                         </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+
+						<!-- Education section -->
                         <section id="edu">
                             <h3>Education:</h3><hr>
-                            <table>
+                            <table width="100%">
                                 <tr>
-                                    <td>
+                                    <td width="80%">
                                         <h3>PES University, Bengaluru</h3>
                                         <p>B.Tech in Computer Science and Engineering</p>
                                     </td>
-                                    <td> 
+                                    <td width="20%"> 
                                         <p>2022 - 2026</p>
-                                        <p>CGPA:9.02</p>
+                                        <p>CGPA: 9.02</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -71,40 +77,38 @@
                                 
                             </table>
                         </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+
+						<!-- Work Experience section -->
                         <section id="work">
                             <h3>Work Experience:</h3><hr>
                             <h4>UI Developer Intern</h4>
-                            <span>Jan 2026-Jun 2026</span>
+                            <span>Jan 2026 - Jun 2026</span>
                             <p><i>Cimpress India Private Limited</i></p>
                             <p>Developed frontend features and UI enhancements using React and Material UI</p>
                             <p>Built reusable UI components and fixed UI-related issues.</p>
                             <p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
                         </section>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+
+						<!-- Pojects section -->
                         <section id="proj">
                             <article>
                             <h3>Projects:</h3><hr>
                             <h4>Smart Waste Management System </h4>
-                            <i>Java,Spring Boot, MySQL</i>
-                            <p>REST API-based role management for waste pickup and live tracking via ThymeLeaf UI.</p>
+                            <i>Java, Spring Boot, MySQL</i>
+                            <p>REST API-based role management for waste pickup and live tracking via Thymeleaf UI.</p>
                             </article>
 
                             <article>
                             <h4>Personalized Medical Data Vault </h4>
-                            <i>Solidity,IPFS,MetaMask</i>
-                            <p>Secure blockchain vault for medical records with Ethereum based access control and IPFS Storage.</p>
+                            <i>Solidity, IPFS, MetaMask</i>
+                            <p>Secure blockchain vault for medical records with Ethereum-based access control and IPFS Storage.</p>
                             </article>
                         </section>
                     </td>
                 </tr>
             </tbody>
+
+			<!-- Footer -->
             <tfoot>
                 <tr>
                     <td colspan="2" align="center">
