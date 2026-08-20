@@ -104,18 +104,18 @@ body {
 }
 
 /*education section styles */
-.edu_item {
+.edu-item {
 	display: flex;
 	justify-content: space-between; /* placing education details and year and gpa info side by side using flexbox */
 	margin-bottom: 20px;
 	padding: 10px;
 }
 
-.edu_details {
+.edu-details {
 	width: 70%;
 }
 
-.edu_year {
+.edu-year {
 	width: 30%;
 	text-align: right;
 }

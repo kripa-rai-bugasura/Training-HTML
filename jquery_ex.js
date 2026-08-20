@@ -5,7 +5,7 @@ $(document).ready(function(){
 	// JQUERY EXERCISE
 	// PART 1
 	// a. Change the background color to #FFFF88 
-	$(this).css("background-color","#FFFF88");
+	$("body").css("background-color","#FFFF88");
 
 
 	// a. remove the border for all input elements in the page
@@ -53,13 +53,13 @@ $(document).ready(function(){
 
 	//PART 2
 	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
-    $("#mypage_header").height(10).css("overflow","hidden")
+    $("#mypage_header").css({"height":"10px","overflow":"hidden"})
 		.hover(
 			function(){
 				$(this).height("");
 			},
 			function(){
-				$(this).height(10);
+				$(this).css({"height":"10px","overflow":"hidden"});
 			}
 		);
 
@@ -131,24 +131,25 @@ $(document).ready(function(){
 	$( "#words" ).autocomplete({
 		minLength: 0,
 		source: function( request, response ) {
-		// delegate back to autocomplete, but extract the last term
-		response( $.ui.autocomplete.filter(
-			tags, extractLast( request.term ) ) );
+			// delegate back to autocomplete, but extract the last term
+			response( $.ui.autocomplete.filter(
+				tags, extractLast( request.term ) 
+			) );
 		},
 		focus: function() {
-		// prevent value inserted on focus
-		return false;
+			// prevent value inserted on focus
+			return false;
 		},
 		select: function( event, ui ) {
-		var terms = split( this.value );
-		// remove the current input
-		terms.pop();
-		// add the selected item
-		terms.push( ui.item.value );
-		// add placeholder to get the comma-and-space at the end
-		terms.push( "" );
-		this.value = terms.join( ", " );
-		return false;
+			var terms = split( this.value );
+			// remove the current input
+			terms.pop();
+			// add the selected item
+			terms.push( ui.item.value );
+			// add placeholder to get the comma-and-space at the end
+			terms.push( "" );
+			this.value = terms.join( ", " );
+			return false;
 		}
 	})
 });
