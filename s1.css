@@ -37,28 +37,17 @@ body {
 
 /* left navigation bar styles */
 #mypage_leftnav {
-	width: 20%;
 	background-color: #EEEEEE;
+	height: auto;
+	padding: 15px 15px 0;
 }
 
-#sticky_content {
+#mypage_leftnav button{
 	width:100%;
-	top: 0px;
-	padding: 20px;
-	align-self: start;
-	position: sticky;
-
 }
-
-#sticky_content h2 {
-	font-size: 1.5em;
-	color: #36393D;
-}
-
-
 
 /* style navigation links */
-#sticky_content a {
+#mypage_leftnav a {
 	display: block;
 	text-decoration: none;
 	color: #356AA0;
@@ -67,14 +56,13 @@ body {
 }
 
 /* change link appearance when mouse is over it */
-#sticky_content a:hover {
+#mypage_leftnav a:hover {
 	color: #3F4C6B;
 	text-decoration: underline;
 }
 
 /* center content styles */
 #mypage_centercontent {
-	width: 100%;
 	padding: 20px;
 	line-height: 1.6;
 }
@@ -97,7 +85,7 @@ body {
 
 /*education section styles */
 .edu-item {
-	display: flex;	
+	display: flex;	 
 	justify-content: space-between; /* placing education details and year and gpa info side by side using flexbox */
 	margin-bottom: 20px;
 	padding: 10px;
@@ -127,11 +115,11 @@ body {
 .company {
 	color: #3F4C6B;
 	font-size: 1.1em;
-}
+} 
 
 /* project details section styles */
 .tech {
-	font-style: italic;  /* technologies written in italics to differentiate from other text */
+	font-style: italic; /* technologies written in italics to differentiate from other text */
 	color: #3F4C6B;
 }
 
@@ -166,16 +154,11 @@ body {
 	width: 98%;
 }
 
-#user_interaction h2 {
-	font-size: 1.5em;
-	color: #36393D;
-	margin-bottom: 10px;
-}
-
 .interaction {
 	margin-bottom: 20px;
 	padding: 10px;
 	border: 1px solid #EEEEEE;
+	height: 50px;
 }
 
 .interaction input {
@@ -183,7 +166,9 @@ body {
 	margin: 5px;
 }
 
-.interaction input[type="button"] {
+.interaction button[type="button"] {
+	margin-top: 5px;
+	margin-left: 2px;
 	padding: 8px 12px;
 	background-color: #3F4C6B;
 	color: #FFFFFF;
@@ -196,21 +181,22 @@ body {
 }
 
 .interaction div {
-	margin: 5px 0;
 	padding: 6px;
 }
 
 .interaction div span {
 	font-weight: bold;
-	color: #3F4C6B;
+	font-size: 1rem;
 }
 
 #max, #rev, #largest, #saved {
+	margin-top: 5px;
     transition: all 0.2s ease-in-out;
 }
 
 /* error message styling*/
 .error {
+	margin-top: 10px;
     color: #FF1A00;
     background-color: #EEEEEE;
     padding: 10px 14px;

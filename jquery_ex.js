@@ -8,8 +8,7 @@ $(document).ready(function(){
 	$("body").css("background-color","#FFFF88");
 
 
-	// a. remove the border for all input elements in the page
-	$("input").css("border","none");
+
 
 
 	// a. Change table border color and text color
@@ -22,7 +21,7 @@ $(document).ready(function(){
 
 
 	// c. Create a new div
-	const ref_div = $("<div></div>").attr("id","references").css({"width": "98%", "padding":"20px","border": "1px solid #EEEEEE", "margin" : "20px auto"});
+	const ref_div = $("<div></div>").attr({"id":"references","class":"row"}).css({"width": "98%", "padding":"20px","border": "1px solid #EEEEEE", "margin" : "20px auto","background-color":"#FFFFFF"});
 	// array of references
 	const references =[{ id : "html", name : "HTML Tutorials", url : "http://w3schools.com/html/default.asp"}, 
 		{ id : "css", name : "CSS Tutorials", url: "https://www.w3schools.com/css/default.asp"},
@@ -44,10 +43,8 @@ $(document).ready(function(){
 	}
 	ref_div.append(list); // append the list to the div
 
-	const div_header = $("<h2></h2>").text("References");
-	$("#footer_header").before(div_header); // add div header so that it becomes a part of accordion
 
-	$("#footer_header").before(ref_div); // add the div before footer
+	$("#mypage_footer").before(ref_div); // add the div before footer
 
 
 
@@ -63,30 +60,13 @@ $(document).ready(function(){
 			}
 		);
 
-	//dialog to open after footer slidedown
-	$("#dialog").dialog({
-		autoOpen: false,  //autoOpen set to false , so it doesn't open upon initialization
-		modal: true,
-		buttons: {
-			"OK": function() {
-			$( this ).dialog( "close" );
-			},
-			Cancel: function() {
-			$( this ).dialog( "close" );
-			}
-      	}
-	})
 
 	//JQUERY UI Exercise
 	$("#mypage_footer").slideDown(10000, function(){
-		$("#dialog").dialog("open");
+		const modal = new bootstrap.Modal(document.getElementById("alertModal"));
+		modal.show();
 	});
     
-	//make resume section accordions
-	$( "#accordion" ).accordion({
-		collapsible: true,  //allow all sections to be collapsible
-		heightStyle: "content"
-	});
 
 	//change buttons to jquery ui buttons , add icons to buttons
 	$("[type='button']")
@@ -107,11 +87,6 @@ $(document).ready(function(){
 	$( "#datepicker" ).datepicker({
 		showAnim: "slideDown",
 		dateFormat: "dd/mm/yy"
-	})
-
-	//make center content section tabs
-	$(" #tabs ").tabs({
-		collapsible: true
 	})
 
 

@@ -2,20 +2,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Kripa S Rai - Resume</title>
-		<link rel="stylesheet" href="s2.css">
-		<link href="jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="s1.css">
+		<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="external/jquery/jquery.js"></script>
-		<script src="jquery-ui.min.js"></script>
+		<script src="jquery-ui/external/jquery/jquery.js"></script>
+		<script src="jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.bundle.js"></script>
 	</head>
 
 	<body>
-		<!-- accordion  -->
-		<div id="accordion">
+
+		<div class="container-fluid">
 			<!-- PAGE HEADER  -->
-			<h2>Header</h2>  <!-- Add header as accordion needs a pair of header and content -->
-			<div id="mypage_header">
+			<div id="mypage_header" class="row">
 				<header>
 					<h1 id="name">Kripa S Rai</h1>
 				</header>
@@ -23,36 +27,40 @@
 
 			<!-- PAGE BODY -->
 			<!-- Contains navigation and main resume content -->
-			<h2>Center Content</h2>
-			<div id="mypage_body">
+			<div id="mypage_body" class="row" >
+				
+				<!-- NAVIGATION BAR -->
+				<nav id="mypage_leftnav" class="col-lg-3 col-md-4 col-12 md-gap-2" > <!--implement tabs for sections-->
+					<p class="h2">Navigation:</p>
+					<ul class="nav nav-tabs flex-md-column gap-2" id="resumeTabs" role="tablist">
+						<li class="nav-item" role="presentation"><button class="nav-link active" id="obj_tab" data-bs-toggle="tab" data-bs-target="#obj" type="button" role="tab" data-bs-toggle="tooltip" title="My career goals and focus"><i class="bi bi-bullseye me-2"></i>Objective</button></li>
+						<li class="nav-item" role="presentation"><button class="nav-link" id="edu_tab" data-bs-toggle="tab" data-bs-target="#edu" type="button" role="tab" data-bs-toggle="tooltip" title="What I have studied"><i class="bi bi-book me-2"></i>Education</button></li>
+						<li class="nav-item" role="presentation"><button class="nav-link" id="work_tab" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab" data-bs-toggle="tooltip" title="My career history"><i class="bi bi-suitcase-lg me-2"></i>Work Experience</button></li>
+						<li class="nav-item" role="presentation"><button class="nav-link" id="proj_tab" data-bs-toggle="tab" data-bs-target="#proj" type="button" role="tab" data-bs-toggle="tooltip" title="What I have built"><i class="bi bi-code-slash me-2"></i>Projects</button></li>
+					</ul>
+				</nav>
+
 
 				<!-- CENTER CONTENT -->
-				<div id="mypage_centercontent">
-
-					<div id="tabs"> <!--implement tabs for sections-->
-						<ul>
-							<li><a href="#obj">Objective</a></li>
-							<li><a href="#edu">Education</a></li>
-							<li><a href="#work">Work Experience</a></li>
-							<li><a href="#proj">Projects</a></li>
-						</ul>
+				<main id="mypage_centercontent" class="col-lg-9 col-md-8" >
+					<div class="tab-content">
 						<!-- OBJECTIVE SECTION -->
-						<section id="obj">
-							<h3>Objective:</h3><hr>
+						<section id="obj" class="tab-pane fade show active" role="tabpanel" aria-labelledby="obj_tab" tabindex="0">
+							<p class="h3"><i class="bi bi-person"></i>Objective:</p><hr>
 							<p>To become a successful software developer by leveraging my skills and knowledge to contribute to innovative and impactful projects and grow professionally.</p>
 						</section>
 
 						<!-- EDUCATION SECTION -->
-						<section id="edu">
-							<h3>Education:</h3><hr>
+						<div id="edu" class="tab-pane fade" role="tabpanel" aria-labelledby="edu_tab" tabindex="0">
+							<p class="h3">Education:</p><hr>
 
 							<!-- University -->
-							<div class="edu-item">
-								<div class="edu-details">
-									<h3>PES University, Bengaluru</h3>
+							<div class="edu-item" class="row">
+								<div class="edu-details" class="col-8">
+									<p class="h3">PES University, Bengaluru</p>
 									<p>B.Tech in Computer Science and Engineering</p>
 								</div>
-								<div class="edu-year">
+								<div class="edu-year" class="col-8">
 									<p>2022 - 2026</p>
 									<p>CGPA: 9.02</p>
 								</div>
@@ -61,7 +69,7 @@
 							<!-- Pre-University -->
 							<div class="edu-item">
 								<div class="edu-details">
-									<h3>Pre-University</h3>
+									<p class="h3">Pre-University</p>
 									<p>Department of Pre-University Examination, Karnataka</p>
 								</div>
 								<div class="edu-year">
@@ -73,7 +81,7 @@
 							<!-- SSLC -->
 							<div class="edu-item">
 								<div class="edu-details">
-									<h3>SSLC</h3>
+									<p class="h3">SSLC</p>
 									<p>Karnataka Secondary Education Examination Board</p>
 								</div>
 								<div class="edu-year">
@@ -82,11 +90,11 @@
 								</div>
 							</div>
 
-						</section>
+						</div>
 
 						<!-- WORK EXPERIENCE SECTION -->
-						<section id="work">
-							<h3>Work Experience:</h3><hr>
+						<div id="work" class="tab-pane fade" role="tabpanel" aria-labelledby="work_tab" tabindex="0">
+							<p class="h3">Work Experience:</p><hr>
 							<div id="work_header">
 								<h4>UI Developer Intern</h4>
 								<span class="time">Jan 2026 - Jun 2026</span>
@@ -95,10 +103,10 @@
 							<p>Developed frontend features and UI enhancements using React and Material UI</p>
 							<p>Built reusable UI components and fixed UI-related issues.</p>
 							<p>Worked with GraphQL queries for frontend data retrieval and integration.</p>
-						</section>
+						</div>
 
 						<!-- PROJECT DETAILS -->
-						<section id="proj">
+						<div id="proj" class="tab-pane fade" role="tabpanel" aria-labelledby="proj_tab" tabindex="0">
 
 							<!-- Project 1 -->
 							<article>
@@ -114,71 +122,135 @@
 								<p class="tech">Solidity, IPFS, MetaMask</p>
 								<p>Secure blockchain vault for medical records with Ethereum-based access control and IPFS Storage.</p>
 							</article>
-						</section>
+						</div>
 					</div>
-				</div>
+				</main>
+
 			</div>
 
-			<h2>User Interaction</h2>
 			<!-- USER INTERACTION SECTION -->
 			<section id="user_interaction">
-				<h2>User Interaction:</h2><hr>
-
+				<h2>User Interaction</h2>
+					<div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
 					<!-- Find maximum of two numbers-->
-					<form class="interaction">
-						<h3>Find Maximum</h3>
-						<input type="number" id="num1" placeholder="Enter first number">
-						<input type="number" id="num2" placeholder="Enter second number">
-						<button type="button" id="max_btn">Find Maximum</button>
-						<div id="max"></div>  <!-- Result or validation message -->
-					</form>
+						<div class="col">
+							<form class="interaction card  border-dark mb-3 h-100">
+								<div class="card-header">Maximum</div>
+								<div class="card-body p-3">
+									<h5 class="card-title">Find maximum of two numbers</h5>
+									<div class="input-group">
+										<label class="visually-hidden" for="num1">Enter first number:</label>
+										<input type="number" class="form-control" id="num1" placeholder="Enter first number">
+										<label class="visually-hidden" for="num2">Enter second number:</label>
+										<input type="number" class="form-control" id="num2" placeholder="Enter second number">
+									</div>
+									<button type="button" id="max_btn" class="btn btn-outline-secondary">Find Maximum</button>
+									<div id="max"></div>  <!-- Result or validation message -->
+								</div>
+							</form>
+						</div>
 
-					<!-- Reverse the input string -->
-					<form class="interaction">
-						<h3>Reverse String</h3>
-						<input type="text" id="reverse" placeholder="Enter a string">
-						<button type="button" id="rev_btn">Reverse</button>
-						<div id="rev"></div>  <!-- Result or validation message -->
-					</form>
+						<!-- Reverse the input string -->
+						<div class="col">
+							<form class="interaction  card  border-dark mb-3 h-100">
+								<div class="card-header">Reverse String</div>
+								<div class="card-body p-3">
+									<h5 class="card-title">Reverse the String</h5>
+									<label class="visually-hidden" for="reverse">Enter a String:</label>
+									<input type="text" class="form-control" id="reverse" placeholder="Enter a string">
+									<button type="button" id="rev_btn" class="btn btn-outline-secondary">Reverse</button>
+									<div id="rev"></div>  <!-- Result or validation message -->
+								</div>
+							</form>
+						</div>
 
-					<!-- Find the longest word -->
-					<form class="interaction">
-						<h3>Find Largest Word</h3>
-						<input type="text" id="words" placeholder="Enter a list of comma-separated words">
-						<button type="button" id="long_btn">Find Largest Word</button>
-						<div id="largest"></div>  <!-- Result or validation message -->
-					</form>
+						<!-- Find the longest word -->
+						<div class="col">
+							<form class="interaction  card  border-dark mb-3 h-100">
+								<div class="card-header">Largest Word</div>
+								<div class="card-body p-3">
+									<h5 class="card-title">Find the longest word</h5>
+									<label class="visually-hidden" for="words">Enter a list of comma-seperated words:</label>
+									<input type="text" class="form-control" id="words" placeholder="Enter a list of comma-separated words">
+									<button type="button" id="long_btn" class="btn btn-outline-secondary">Find Largest Word</button>
+									<div id="largest"></div>  <!-- Result or validation message -->
+								</div>
+							</form>
+						</div>
 
-					<!-- Datepicker -->
-					<form class="interaction">
-						<h3>Pick a Date </h3>
-						<p>Date: <input type="text" id="datepicker">
-					</form>
 
-					<!-- Save Details into  Cookie -->
-					<form class="interaction">
-						<h3>Save Details</h3>
-						<input type="text" id="username" placeholder="Enter your name">
-						<input type="tel" id="user_phone" placeholder="Enter your phone number">
-						<button type="button" id="save_btn">Save</button>
-						<div id="saved"></div>  <!-- Result or validation message -->
-					</form>
+						<!-- Datepicker -->
+						<div class="col">
+							<form class="interaction  card  border-dark mb-3 h-100">
+								<div class="card-header">Date Picker </div>
+								<div class="card-body p-3">
+									<h5 class="card-title">Pick a Date <i class="bi bi-calendar2-date "></i></h5>
+									<div class="row">
+										<label class="col-sm-4 align-content-center" for="datepicker">Date:</label>
+										<div class="col-sm-8">
+											<input class="form-control" type="text"  id="datepicker">
+										</div>
+										
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<!-- Save Details into  Cookie -->
+						<div class="col">
+							<form class="interaction card  border-dark mb-3 h-100">
+								<div class="card-header">Details</div>
+								<div class="card-body p-3">
+									<h5 class="card-title">Save Details</h5>
+									<div class="input-group">
+										<input type="text" class="form-control" id="username" placeholder="Enter your name">
+										<input type="tel" class="form-control" id="user_phone" placeholder="Enter your phone number">
+									</div>
+									<button type="button" id="save_btn" class="btn btn-outline-secondary m-2">Save</button>
+									<!-- Result or validation message -->
+									<div id="saved"></div> 
+									<div id="save_toast" class="toast align-items-center border border-success border-2" role="alert" aria-live="assertive" aria-atomic="true">
+										<div class="d-flex">
+											<div class="toast-body">
+												Details saved successfully.
+											</div>
+											<button type="button" class="btn btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 
 			</section>
 
 
-			<h2 id="footer_header">Footer</h2>
 			<!-- PAGE FOOTER WITH CONTACT DETAILS -->
-			<div id="mypage_footer">
+			<div id="mypage_footer" class="row">
 				<footer>
 					<h3>Contact Me: </h3>
-					<p> <a href="mailto:kripasrai11@gmail.com">Email: kripasrai11@gmail.com</a> </p>
+					<p> <a href="mailto:kripasrai11@gmail.com"><i class="bi bi-envelope me-2"></i>Email: kripasrai11@gmail.com</a> </p>
 					<p><a id="mypage_phone" href="tel:+919353266721">Phone: +91 9353266721</a> </p>
 				</footer>
-				<div id="dialog" title="Alert">
-					<p>Animation complete.</p>
+				<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="alertModalLabel">Alert</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>Animation complete!</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+
 		</div>
 
 

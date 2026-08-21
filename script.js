@@ -39,7 +39,7 @@ function displayMax() {
 
 	// Find and display the result
     let result = max(num1, num2);
-    res.innerHTML = "The maximum number is: <span class='res'>" + result + "</span>";
+    res.innerHTML = "The maximum number is: <span class='badge bg-info'>" + result + "</span>";
 }
 document.getElementById("max_btn").addEventListener('click',displayMax);
 
@@ -72,7 +72,7 @@ function displayReverse() {
 	// Remove previously added error styling
 	rev.classList.remove("error");
     const reversed = reverse(inp);
-    rev.innerHTML = "Reversed string is: <span class='res'>" + reversed + "</span>";
+    rev.innerHTML = "Reversed string is: <span class='badge bg-info'>" + reversed + "</span>";
 }
 document.getElementById("rev_btn").addEventListener('click', displayReverse);
 
@@ -115,7 +115,7 @@ function displayLongestWord() {
     const largest = document.getElementById("largest");
 	// Remove previously added error styling
 	largest.classList.remove("error");
-	if(FindLongestWord(inp)) largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
+	if(FindLongestWord(inp)) largest.innerHTML = "The longest word is: <span class='badge bg-info'>" + FindLongestWord(inp) + "</span>";
 }
 document.getElementById("long_btn").addEventListener('click', displayLongestWord);
 
@@ -161,8 +161,8 @@ function saveDetails() {
 	// save values as cookies for 7 days
     document.cookie = "name=" + encodeURIComponent(name) + ";max-age=604800; path=/";
     document.cookie = "phone=" + encodeURIComponent(phone)+ "; max-age=604800; path=/";
-	saved.classList.add("success");
-    saved.innerText = "Details saved successfully!";
+    const toast = new bootstrap.Toast(document.getElementById("save_toast"));
+	toast.show();
 }
 document.getElementById("save_btn").addEventListener('click',saveDetails);
 
