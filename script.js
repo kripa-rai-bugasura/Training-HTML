@@ -127,9 +127,9 @@ function saveDetails() {
     const name = document.getElementById("username").value.trim();
     const phone = document.getElementById("user_phone").value.trim();
 	const saved = document.getElementById("saved");
-
+	const toast = new bootstrap.Toast(document.getElementById("save_toast"));
 	// Remove previously added success styling
-	saved.classList.remove("success");
+	toast.hide();
 	// Remove previously added error styling
 	saved.classList.remove("error");
 
@@ -161,7 +161,6 @@ function saveDetails() {
 	// save values as cookies for 7 days
     document.cookie = "name=" + encodeURIComponent(name) + ";max-age=604800; path=/";
     document.cookie = "phone=" + encodeURIComponent(phone)+ "; max-age=604800; path=/";
-    const toast = new bootstrap.Toast(document.getElementById("save_toast"));
 	toast.show();
 }
 document.getElementById("save_btn").addEventListener('click',saveDetails);

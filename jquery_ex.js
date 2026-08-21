@@ -8,9 +8,6 @@ $(document).ready(function(){
 	$("body").css("background-color","#FFFF88");
 
 
-
-
-
 	// a. Change table border color and text color
 	$("table").css({"border":"#FF1A00", "color":"#CC0000"});
 
