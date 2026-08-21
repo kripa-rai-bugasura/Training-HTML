@@ -94,6 +94,12 @@ body {
 	color: #3F4C6B;
 }
 
+@media (max-width: 850px) {
+	#mypage_leftnav {
+		width: 40%
+	}
+}
+
 /*education section styles */
 .edu-item {
 	display: flex;	
@@ -165,6 +171,21 @@ body {
 	width: 98%;
 }
 
+#interaction_sections {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 16px;
+}
+
+@media (max-width: 600px) {
+  #interaction_sections {
+	display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
 #user_interaction h2 {
 	font-size: 1.5em;
 	color: #36393D;
@@ -175,11 +196,17 @@ body {
 	margin-bottom: 20px;
 	padding: 10px;
 	border: 1px solid #EEEEEE;
+	border-radius: 10px;
 }
 
 .interaction input {
 	padding: 8px;
 	margin: 5px;
+}
+
+.interaction input:not([type="button"]) {
+	width: 100%;
+	max-width: 300px;
 }
 
 .interaction input[type="button"] {
@@ -194,6 +221,7 @@ body {
 }
 
 .interaction div {
+	display: inline;
 	margin: 5px 0;
 	padding: 6px;
 }
@@ -208,7 +236,8 @@ body {
 }
 
 /* error message styling*/
-.error {
+div.error {
+	display: block;
     color: #FF1A00;
     background-color: #EEEEEE;
     padding: 10px 14px;
@@ -216,7 +245,8 @@ body {
 }
 
 /* success message styling*/
-.success {
+div.success {
+	display: block;
     color: #008C00;
     background-color: #EEEEEE;
     padding: 10px 14px;

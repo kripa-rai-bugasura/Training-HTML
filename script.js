@@ -171,15 +171,15 @@ function saveDetails() {
 
 // LOAD DETAILS FROM THE COOKIES
 function loadDetails() {
-    const cookies = document.cookie.split("; ");
+    const cookies = document.cookie.split(";");
     let name = "";
     let phone = "";
     for(let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].split("=");
+        let cookie = cookies[i].trim().split("=");
         if(cookie[0] === "name") {
-            name = decodeURIComponent(cookie[1]);
+            name = decodeURIComponent(cookie[1].trim());
         } else if(cookie[0] === "phone") {
-            phone = decodeURIComponent(cookie[1]);
+            phone = decodeURIComponent(cookie[1].trim());
         }
     }
 
@@ -196,4 +196,4 @@ function loadDetails() {
 }
 
 // Load saved cookie details when the page opens
-window.onload = loadDetails;
+window.addEventListener('load',loadDetails);

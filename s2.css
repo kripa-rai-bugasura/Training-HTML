@@ -99,6 +99,13 @@ body {
 	color: #B02B2C;
 }
 
+@media (max-width: 850px) {
+	#mypage_leftnav {
+		width: 40%
+	}
+}
+
+
 #mypage_centercontent section {
 	scroll-margin-top: 130px; /*to prevent content hiding behind the header*/
 }
@@ -181,6 +188,20 @@ body {
 	margin-bottom: 15px;
 }
 
+#interaction_sections {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 16px;
+}
+
+@media (max-width: 600px) {
+  #interaction_sections {
+	display: flex;
+    flex-direction: column;
+  }
+}
+
+
 .interaction {
 	margin-bottom: 20px;
 	padding: 15px;
@@ -214,7 +235,14 @@ body {
 	background-color: #B02B2C;
 }
 
+
+.interaction input:not([type="button"]) {
+	width: 100%;
+	max-width: 300px;
+}
+
 .interaction div {
+	display: inline;
 	margin: 8px 0;
 	padding: 8px;
 }
@@ -229,7 +257,8 @@ body {
 }
 
 /* error message styling*/
-.error {
+div.error {
+	display: block;
     color: #B02B2C;
     background-color: #EEEEEE;
     padding: 10px 14px;
@@ -237,7 +266,8 @@ body {
 }
 
 /* success message styling*/
-.success {
+div.success {
+	display: block;
     color: #006E2E;
     background-color: #EEEEEE;
     padding: 10px 14px;
