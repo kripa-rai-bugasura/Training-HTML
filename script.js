@@ -174,15 +174,15 @@ document.getElementById("save_btn").addEventListener('click',saveDetails);
 
 // LOAD DETAILS FROM THE COOKIES
 function loadDetails() {
-    const cookies = document.cookie.split("; ");
+    const cookies = document.cookie.split(";");
     let name = "";
     let phone = "";
     for(let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].split("=");
+        let cookie = cookies[i].trim().split("=");
         if(cookie[0] === "name") {
-            name = decodeURIComponent(cookie[1]);
+            name = decodeURIComponent(cookie[1].trim());
         } else if(cookie[0] === "phone") {
-            phone = decodeURIComponent(cookie[1]);
+            phone = decodeURIComponent(cookie[1].trim());
         }
     }
 
@@ -199,7 +199,7 @@ function loadDetails() {
 }
 
 // Load saved cookie details when the page opens
-window.onload = loadDetails;
+window.addEventListener('load',loadDetails);
 
 
 
@@ -253,13 +253,13 @@ $(document).ready(function(){
 
 	//PART 2
 	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
-    $("#mypage_header").css({"height": "10px ", "overflow":"hidden"})
+    $("#mypage_header").css({"height": "10px ", "overflow": "hidden", "padding": "0px"})
 		.hover(
 			function(){
-				$(this).height("");
+				$(this).css({"height":"","padding": "25px"});
 			},
 			function(){
-				$(this).css({"height": "10px", "overflow":"hidden"});
+				$(this).css({"height": "10px", "overflow": "hidden", "padding": "0px"});
 			}
 		);
 
