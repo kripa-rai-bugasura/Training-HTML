@@ -47,20 +47,24 @@ $(document).ready(function(){
 
 	//PART 2
 	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
-    $("#mypage_header").css({"height":"10px","overflow":"hidden"})
+    $("#mypage_header").css({"height":"10px","overflow":"hidden","padding":"0px"})
 		.hover(
 			function(){
-				$(this).height("");
+				$(this).css({"height":"","padding":"25px"});
 			},
 			function(){
-				$(this).css({"height":"10px","overflow":"hidden"});
+				$(this).css({"height":"10px","overflow":"hidden","padding":"0px"});
 			}
 		);
 
 
 	//JQUERY UI Exercise
 	$("#mypage_footer").slideDown(10000, function(){
-		const modal = new bootstrap.Modal(document.getElementById("alertModal"));
+		const modalEl = document.getElementById("alert_modal");
+		let modal = bootstrap.Modal.getInstance(modalEl);
+		if(!modal) {
+			modal = new bootstrap.Modal(modalEl);
+		}
 		modal.show();
 	});
     
@@ -124,4 +128,12 @@ $(document).ready(function(){
 			return false;
 		}
 	})
+
+	document.getElementById("max_btn").addEventListener('click',displayMax);
+	document.getElementById("rev_btn").addEventListener('click', displayReverse);
+	document.getElementById("long_btn").addEventListener('click', displayLongestWord);
+	document.getElementById("save_btn").addEventListener('click',saveDetails);
+
+	// Load saved cookie details when the page opens
+	loadDetails();
 });

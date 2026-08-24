@@ -41,7 +41,7 @@ function displayMax() {
     let result = max(num1, num2);
     res.innerHTML = "The maximum number is: <span class='badge bg-info'>" + result + "</span>";
 }
-document.getElementById("max_btn").addEventListener('click',displayMax);
+
 
 
 // REVERSE A STRING
@@ -74,7 +74,7 @@ function displayReverse() {
     const reversed = reverse(inp);
     rev.innerHTML = "Reversed string is: <span class='badge bg-info'>" + reversed + "</span>";
 }
-document.getElementById("rev_btn").addEventListener('click', displayReverse);
+
 
 
 // FIND LONGEST WORD
@@ -117,7 +117,7 @@ function displayLongestWord() {
 	largest.classList.remove("error");
 	if(FindLongestWord(inp)) largest.innerHTML = "The longest word is: <span class='badge bg-info'>" + FindLongestWord(inp) + "</span>";
 }
-document.getElementById("long_btn").addEventListener('click', displayLongestWord);
+
 
 
 // SAVE DETAILS USING COOKIES
@@ -127,11 +127,16 @@ function saveDetails() {
     const name = document.getElementById("username").value.trim();
     const phone = document.getElementById("user_phone").value.trim();
 	const saved = document.getElementById("saved");
-	const toast = new bootstrap.Toast(document.getElementById("save_toast"));
+	const toastEl = document.getElementById("save_toast");
+	let toast = bootstrap.Toast.getInstance(toastEl);
+	if(!toast) {
+		toast = new bootstrap.Toast(toastEl);
+	}
 	// Remove previously added success styling
 	toast.hide();
 	// Remove previously added error styling
 	saved.classList.remove("error");
+	saved.innerText = "";
 
 	// check that both fields are filled
 	if(name === "" || phone === "") {
@@ -163,7 +168,7 @@ function saveDetails() {
     document.cookie = "phone=" + encodeURIComponent(phone)+ "; max-age=604800; path=/";
 	toast.show();
 }
-document.getElementById("save_btn").addEventListener('click',saveDetails);
+
 
 // LOAD DETAILS FROM THE COOKIES
 function loadDetails() {
@@ -191,5 +196,4 @@ function loadDetails() {
 
 }
 
-// Load saved cookie details when the page opens
-window.onload = loadDetails;
+
