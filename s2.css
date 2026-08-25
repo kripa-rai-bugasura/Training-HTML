@@ -16,7 +16,6 @@ body {
 	background-color: #D15600;
 	text-align: center;
 	color: #FFFFFF;
-	padding: 25px;
 	position: fixed;  /* fixed header at the top */
 	top: 0;
 	left: 0;
@@ -97,6 +96,12 @@ body {
 #mypage_centercontent h4 {
 	font-size: 1.25em;
 	color: #B02B2C;
+}
+
+@media (max-width: 850px) {
+	#mypage_leftnav {
+		width: 40%
+	}
 }
 
 #mypage_centercontent section {
@@ -181,6 +186,19 @@ body {
 	margin-bottom: 15px;
 }
 
+#interaction_sections {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 16px;
+}
+
+@media (max-width: 600px) {
+  #interaction_sections {
+	display: flex;
+    flex-direction: column;
+  }
+}
+
 .interaction {
 	margin-bottom: 20px;
 	padding: 15px;
@@ -210,12 +228,18 @@ button {
 	font-size: 1em;
 }
 
+.interaction input:not([type="button"]) {
+	width: 100%;
+	max-width: 300px;
+}
+
 .interaction button:hover {
 	background-color: #B02B2C;
 	color: #FFFFFF;
 }
 
 .interaction div {
+	display: inline;
 	margin: 8px 0;
 	padding: 8px;
 }
@@ -230,7 +254,8 @@ button {
 }
 
 /* error message styling*/
-.error {
+div.error {
+	display: block;
     color: #B02B2C;
     background-color: #EEEEEE;
     padding: 10px 14px;
@@ -238,7 +263,8 @@ button {
 }
 
 /* success message styling*/
-.success {
+div.success {
+	display: block;
     color: #006E2E;
     background-color: #EEEEEE;
     padding: 10px 14px;

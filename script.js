@@ -41,7 +41,6 @@ function displayMax() {
     let result = max(num1, num2);
     res.innerHTML = "The maximum number is: <span class='res'>" + result + "</span>";
 }
-document.getElementById("max_btn").addEventListener('click',displayMax);
 
 
 // REVERSE A STRING
@@ -74,7 +73,6 @@ function displayReverse() {
     const reversed = reverse(inp);
     rev.innerHTML = "Reversed string is: <span class='res'>" + reversed + "</span>";
 }
-document.getElementById("rev_btn").addEventListener('click', displayReverse);
 
 
 // FIND LONGEST WORD
@@ -117,7 +115,6 @@ function displayLongestWord() {
 	largest.classList.remove("error");
 	if(FindLongestWord(inp)) largest.innerHTML = "The longest word is: <span class='res'>" + FindLongestWord(inp) + "</span>";
 }
-document.getElementById("long_btn").addEventListener('click', displayLongestWord);
 
 
 // SAVE DETAILS USING COOKIES
@@ -164,19 +161,18 @@ function saveDetails() {
 	saved.classList.add("success");
     saved.innerText = "Details saved successfully!";
 }
-document.getElementById("save_btn").addEventListener('click',saveDetails);
 
 // LOAD DETAILS FROM THE COOKIES
 function loadDetails() {
-    const cookies = document.cookie.split("; ");
+    const cookies = document.cookie.split(";");
     let name = "";
     let phone = "";
     for(let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].split("=");
+        let cookie = cookies[i].trim().split("=");
         if(cookie[0] === "name") {
-            name = decodeURIComponent(cookie[1]);
+            name = decodeURIComponent(cookie[1].trim());
         } else if(cookie[0] === "phone") {
-            phone = decodeURIComponent(cookie[1]);
+            phone = decodeURIComponent(cookie[1].trim());
         }
     }
 
@@ -192,5 +188,5 @@ function loadDetails() {
 
 }
 
-// Load saved cookie details when the page opens
-window.onload = loadDetails;
+
+

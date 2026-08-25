@@ -17,7 +17,6 @@ body {
 	background-color: #3F4C6B;
 	text-align: center;
 	color: #FFFFFF;
-	padding: 25px;
 }
 
 #mypage_header h1 {
@@ -94,6 +93,11 @@ body {
 	color: #3F4C6B;
 }
 
+@media (max-width: 850px) {
+	#mypage_leftnav {
+		width: 40%
+	}
+}
 
 /*education section styles */
 .edu-item {
@@ -166,16 +170,35 @@ body {
 	width: 98%;
 }
 
+#interaction_sections {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 16px;
+}
+
+@media (max-width: 600px) {
+  #interaction_sections {
+	display: flex;
+    flex-direction: column;
+  }
+}
+
 #user_interaction h2 {
 	font-size: 1.5em;
 	color: #36393D;
 	margin-bottom: 10px;
+	border-radius: 10px;
 }
 
 .interaction {
 	margin-bottom: 20px;
 	padding: 10px;
 	border: 1px solid #EEEEEE;
+}
+
+.interaction input:not([type="button"]) {
+	width: 100%;
+	max-width: 300px;
 }
 
 .interaction input {
@@ -196,6 +219,7 @@ body {
 }
 
 .interaction div {
+	display: inline;
 	margin: 5px 0;
 	padding: 6px;
 }
@@ -210,7 +234,8 @@ body {
 }
 
 /* error message styling*/
-.error {
+div.error {
+	display: block;
     color: #FF1A00;
     background-color: #EEEEEE;
     padding: 10px 14px;
@@ -218,7 +243,8 @@ body {
 }
 
 /* success message styling*/
-.success {
+div.success {
+	display: block;
     color: #008C00;
     background-color: #EEEEEE;
     padding: 10px 14px;

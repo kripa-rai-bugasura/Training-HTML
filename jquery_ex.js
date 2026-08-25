@@ -53,13 +53,13 @@ $(document).ready(function(){
 
 	//PART 2
 	// a. change the mypage-header height to 10px, expand on mouse move and go back to smaller size when mouse moves away.
-    $("#mypage_header").css({"height":"10px","overflow":"hidden"})
+    $("#mypage_header").css({"height":"10px","overflow":"hidden", "padding": "0px"})
 		.hover(
 			function(){
-				$(this).height("");
+				$(this).css({"height":"","padding":"25px"});
 			},
 			function(){
-				$(this).css({"height":"10px","overflow":"hidden"});
+				$(this).css({"height":"10px","overflow":"hidden","padding":"0px"});
 			}
 		);
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
 		.end().eq(3).button({
 			icon: "ui-icon-disk"
 		});
-		
+
 	//add datepicker to datepicker element with date format dd/mm/yyyy
 	$( "#datepicker" ).datepicker({
 		showAnim: "slideDown",
@@ -152,4 +152,12 @@ $(document).ready(function(){
 			return false;
 		}
 	})
+
+	document.getElementById("max_btn").addEventListener('click',displayMax);
+	document.getElementById("rev_btn").addEventListener('click', displayReverse);
+	document.getElementById("long_btn").addEventListener('click', displayLongestWord);
+	document.getElementById("save_btn").addEventListener('click',saveDetails);
+
+	// Load saved cookie details when the page opens
+	loadDetails();
 });
